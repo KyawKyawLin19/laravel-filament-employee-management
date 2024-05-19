@@ -39,3 +39,13 @@
 - Create Model for country, state, city, department, employee
 - Make relationships
 - Working with migrations
+- Create Country Resource
+    ```
+    php artisan make:filament-resource Country
+- Create the form
+- Create the table
+- Create State Resource
+- Create City Resource
+- Create Department Resource
+- Create Employee Resource
+  

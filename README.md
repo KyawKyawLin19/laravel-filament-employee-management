@@ -63,60 +63,73 @@
         <th>employees</th>
         <td>id</td>
         <td>integer</td>
+        <td></td>
     </tr>
     <tr>
         <th></th>
         <td>first_name</td>
         <td>string</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>last_name</td>
         <td>string</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>address</td>
         <td>string</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>department_id</td>
         <td>foreignId('department_id')->constrained()->cascadeOnDelete()</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>city_id</td>
         <td>foreignId('city_id')->constrained()->cascadeOnDelete()</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>state_id</td>
         <td>foreignId('state_id')->constrained()->cascadeOnDelete()</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>country_id</td>
         <td>foreignId('country_id')->constrained()->cascadeOnDelete()</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>zip_code</td>
         <td>char</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>birth_date</td>
         <td>date</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>date_hired</td>
         <td>date</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>timestamp</td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 
@@ -125,20 +138,25 @@
         <th>countries</th>
         <td>id</td>
         <td>integer</td>
+        <td></td>
     </tr>
     <tr>
         <th></th>
         <td>country_code</td>
         <td>char</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>name</td>
         <td>string</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>timestamp</td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 
@@ -161,6 +179,7 @@
     <tr>
         <th></th>
         <td>timestamp</td>
+        <td></td>
     </tr>
 </table>
 
@@ -186,6 +205,8 @@
     <tr>
         <th></th>
         <td>timestamp</td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 
@@ -194,14 +215,46 @@
         <th>departments</th>
         <td>id</td>
         <td>integer</td>
+        <td></td>
     </tr>
     <tr>
         <th></th>
         <td>name</td>
         <td>string</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>timestamp</td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
+
+### Relationships between Tables
+
+#### Employees Table
+
+- **country_id:** Foreign key referencing the `id` column in the `countries` table. *(Many employees can belong to one country)*
+- **state_id:** Foreign key referencing the `id` column in the `states` table. *(Many employees can belong to one state)*
+- **city_id:** Foreign key referencing the `id` column in the `cities` table. *(Many employees can belong to one city)*
+- **department_id:** Foreign key referencing the `id` column in the `departments` table. *(Many employees can belong to one department)*
+
+#### Countries Table
+
+- No direct relationships.
+
+#### States Table
+
+- **country_id:** Foreign key referencing the `id` column in the `countries` table. *(One state belongs to one country, but a country can have many states)*
+  - **Employees:** One-to-many relationship with the `employees` table through the `state_id` foreign key.
+
+#### Cities Table
+
+- **state_id:** Foreign key referencing the `id` column in the `states` table. *(One city belongs to one state, but a state can have many cities)*
+  - **Employees:** One-to-many relationship with the `employees` table through the `city_id` foreign key.
+
+#### Departments Table
+
+- No direct relationships.
+  - **Employees:** One-to-many relationship with the `employees` table through the `department_id` foreign key.
