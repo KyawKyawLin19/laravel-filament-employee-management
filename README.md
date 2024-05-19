@@ -59,5 +59,124 @@
 ## Create API endpoint to list all employees order alphabetically by last name.
 
 <table>
-    <tr></tr>
+    <tr>
+        <th>employees</th>
+        <td>id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>first_name</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>last_name</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>address</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>department_id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>city_id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>state_id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>country_id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>zip_code</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>birth_date</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>date_hired</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>timestamp</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>countries</th>
+        <td>id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>country_code</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>name</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>timestamp</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>states</th>
+        <td>id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>country_id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>name</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>timestamp</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>cities</th>
+        <td>id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>state_id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>name</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>timestamp</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>departments</th>
+        <td>id</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>name</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>timestamp</td>
+    </tr>
 </table>
