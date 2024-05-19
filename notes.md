@@ -37,3 +37,5 @@
 
 - Fix login attempt
 - Create Model for country, state, city, department, employee
+- Make relationships
+- Working with migrations

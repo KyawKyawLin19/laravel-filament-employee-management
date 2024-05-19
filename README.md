@@ -62,46 +62,57 @@
     <tr>
         <th>employees</th>
         <td>id</td>
+        <td>integer</td>
     </tr>
     <tr>
         <th></th>
         <td>first_name</td>
+        <td>string</td>
     </tr>
     <tr>
         <th></th>
         <td>last_name</td>
+        <td>string</td>
     </tr>
     <tr>
         <th></th>
         <td>address</td>
+        <td>string</td>
     </tr>
     <tr>
         <th></th>
         <td>department_id</td>
+        <td>foreignId('department_id')->constrained()->cascadeOnDelete()</td>
     </tr>
     <tr>
         <th></th>
         <td>city_id</td>
+        <td>foreignId('city_id')->constrained()->cascadeOnDelete()</td>
     </tr>
     <tr>
         <th></th>
         <td>state_id</td>
+        <td>foreignId('state_id')->constrained()->cascadeOnDelete()</td>
     </tr>
     <tr>
         <th></th>
         <td>country_id</td>
+        <td>foreignId('country_id')->constrained()->cascadeOnDelete()</td>
     </tr>
     <tr>
         <th></th>
         <td>zip_code</td>
+        <td>char</td>
     </tr>
     <tr>
         <th></th>
         <td>birth_date</td>
+        <td>date</td>
     </tr>
     <tr>
         <th></th>
         <td>date_hired</td>
+        <td>date</td>
     </tr>
     <tr>
         <th></th>
@@ -113,14 +124,17 @@
     <tr>
         <th>countries</th>
         <td>id</td>
+        <td>integer</td>
     </tr>
     <tr>
         <th></th>
         <td>country_code</td>
+        <td>char</td>
     </tr>
     <tr>
         <th></th>
         <td>name</td>
+        <td>string</td>
     </tr>
     <tr>
         <th></th>
@@ -132,14 +146,17 @@
     <tr>
         <th>states</th>
         <td>id</td>
+        <td>integer</td>
     </tr>
     <tr>
         <th></th>
         <td>country_id</td>
+        <td>foreignId('country_id')->constrained()->cascadeOnDelete()</td>
     </tr>
     <tr>
         <th></th>
         <td>name</td>
+        <td>string</td>
     </tr>
     <tr>
         <th></th>
@@ -151,14 +168,20 @@
     <tr>
         <th>cities</th>
         <td>id</td>
+        <td>integer</td>
+        <td></td>
     </tr>
     <tr>
         <th></th>
         <td>state_id</td>
+        <td>foreignId('state_id')->constrained()->cascadeOnDelete()</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
         <td>name</td>
+        <td>string</td>
+        <td>fillable</td>
     </tr>
     <tr>
         <th></th>
@@ -170,13 +193,15 @@
     <tr>
         <th>departments</th>
         <td>id</td>
+        <td>integer</td>
     </tr>
     <tr>
         <th></th>
         <td>name</td>
+        <td>string</td>
     </tr>
     <tr>
         <th></th>
         <td>timestamp</td>
     </tr>
-</table>
+</table>3
