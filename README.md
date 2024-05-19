@@ -5,17 +5,17 @@
 - Employees Management and
 - System Management
 
-<ol>
-    <li>Country</li>
-    <li>State</li>
-    <li>City</li>
-    <li>Department</li>
-</ol>
+    <ol>
+        <li>Country</li>
+        <li>State</li>
+        <li>City</li>
+        <li>Department</li>
+    </ol>
 
 - User Management
-<ol>
-    <li>User</li>
-</ol>
+    <ol>
+        <li>User</li>
+    </ol>
 
 ## Authentication
 
@@ -30,7 +30,7 @@
 
 ## Employee Management
 
--List of employees with search and filter by name and department
+- List of employees with search and filter by name and department
 - Create, update and delete employees
 
 
@@ -41,17 +41,17 @@
         <li>Create, update and delete</li>
     </ol>
 - State
-- <ol>
+    <ol>
         <li>List States with Search</li>
         <li>Create, update and delete</li>
     </ol>
 - City
-  - <ol>
+    <ol>
         <li>List Cities with Search</li>
         <li>Create, update and delete</li>
     </ol>
 - Department
-  - <ol>
+    <ol>
         <li>List departments with Search</li>
         <li>Create, update and delete</li>
     </ol>
